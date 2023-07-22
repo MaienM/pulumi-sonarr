@@ -5,8 +5,6 @@ import (
 	tf "github.com/hashicorp/terraform-plugin-framework/provider"
 )
 
-func NewProvider() func() tf.Provider {
-	return func() tf.Provider {
-		return provider.New()
-	}
+func NewProvider(version string) func() tf.Provider {
+	return provider.New(version)
 }
