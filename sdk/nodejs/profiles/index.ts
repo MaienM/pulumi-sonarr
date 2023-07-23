@@ -68,6 +68,15 @@ export { GetDelayProfilesResult } from "./getDelayProfiles";
 export const getDelayProfiles: typeof import("./getDelayProfiles").getDelayProfiles = null as any;
 utilities.lazyLoad(exports, ["getDelayProfiles"], () => require("./getDelayProfiles"));
 
+export { GetLanguageArgs, GetLanguageResult, GetLanguageOutputArgs } from "./getLanguage";
+export const getLanguage: typeof import("./getLanguage").getLanguage = null as any;
+export const getLanguageOutput: typeof import("./getLanguage").getLanguageOutput = null as any;
+utilities.lazyLoad(exports, ["getLanguage","getLanguageOutput"], () => require("./getLanguage"));
+
+export { GetLanguagesResult } from "./getLanguages";
+export const getLanguages: typeof import("./getLanguages").getLanguages = null as any;
+utilities.lazyLoad(exports, ["getLanguages"], () => require("./getLanguages"));
+
 export { GetQualityArgs, GetQualityResult, GetQualityOutputArgs } from "./getQuality";
 export const getQuality: typeof import("./getQuality").getQuality = null as any;
 export const getQualityOutput: typeof import("./getQuality").getQualityOutput = null as any;

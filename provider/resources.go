@@ -39,7 +39,6 @@ const (
 	modDownloadClients = "DownloadClients"
 	modImportLists     = "ImportLists"
 	modIndexers        = "Indexers"
-	modLanguages       = "Languages"
 	modMediaManagement = "MediaManagement"
 	modMetadata        = "Metadata"
 	modNotifications   = "Notifications"
@@ -228,9 +227,6 @@ func Provider() tfbridge.ProviderInfo {
 			"sonarr_indexer_config": {Tok: makeDataSource(modIndexers, "sonarr_indexer_config")},
 			"sonarr_indexers":       {Tok: makeDataSource(modIndexers, "sonarr_indexers")},
 
-			"sonarr_language":  {Tok: makeDataSource(modLanguages, "sonarr_language")},
-			"sonarr_languages": {Tok: makeDataSource(modLanguages, "sonarr_languages")},
-
 			"sonarr_media_management": {Tok: makeDataSource(modMediaManagement, "sonarr_media_management")},
 			"sonarr_naming":           {Tok: makeDataSource(modMediaManagement, "sonarr_naming")},
 			"sonarr_root_folder":      {Tok: makeDataSource(modMediaManagement, "sonarr_root_folder")},
@@ -253,6 +249,8 @@ func Provider() tfbridge.ProviderInfo {
 			"sonarr_custom_formats":                        {Tok: makeDataSource(modProfiles, "sonarr_custom_formats")},
 			"sonarr_delay_profile":                         {Tok: makeDataSource(modProfiles, "sonarr_delay_profile")},
 			"sonarr_delay_profiles":                        {Tok: makeDataSource(modProfiles, "sonarr_delay_profiles")},
+			"sonarr_language":                              {Tok: makeDataSource(modProfiles, "sonarr_language")},
+			"sonarr_languages":                             {Tok: makeDataSource(modProfiles, "sonarr_languages")},
 			"sonarr_quality":                               {Tok: makeDataSource(modProfiles, "sonarr_quality")},
 			"sonarr_quality_definition":                    {Tok: makeDataSource(modProfiles, "sonarr_quality_definition")},
 			"sonarr_quality_definitions":                   {Tok: makeDataSource(modProfiles, "sonarr_quality_definitions")},

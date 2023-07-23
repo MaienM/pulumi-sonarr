@@ -15,13 +15,13 @@ import * as utilities from "../utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as sonarr from "@pulumi/sonarr";
  *
- * const example = sonarr.Languages.getLanguages({});
+ * const example = sonarr.Profiles.getLanguages({});
  * ```
  */
 export function getLanguages(opts?: pulumi.InvokeOptions): Promise<GetLanguagesResult> {
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
-    return pulumi.runtime.invoke("sonarr:Languages/getLanguages:getLanguages", {
+    return pulumi.runtime.invoke("sonarr:Profiles/getLanguages:getLanguages", {
     }, opts);
 }
 
@@ -36,5 +36,5 @@ export interface GetLanguagesResult {
     /**
      * Language list.
      */
-    readonly languages: outputs.Languages.GetLanguagesLanguage[];
+    readonly languages: outputs.Profiles.GetLanguagesLanguage[];
 }

@@ -450,24 +450,6 @@ export namespace Indexers {
 
 }
 
-export namespace Languages {
-    export interface GetLanguagesLanguage {
-        /**
-         * Language ID.
-         */
-        id: number;
-        /**
-         * Language.
-         */
-        name: string;
-        /**
-         * Language in lowercase.
-         */
-        nameLower: string;
-    }
-
-}
-
 export namespace MediaManagement {
     export interface GetRootFolderUnmappedFolder {
         /**
@@ -1066,6 +1048,21 @@ export namespace Profiles {
          * Usenet delay.
          */
         usenetDelay: number;
+    }
+
+    export interface GetLanguagesLanguage {
+        /**
+         * Language ID.
+         */
+        id: number;
+        /**
+         * Language.
+         */
+        name: string;
+        /**
+         * Language in lowercase.
+         */
+        nameLower: string;
     }
 
     export interface GetQualityDefinitionsQualityDefinition {

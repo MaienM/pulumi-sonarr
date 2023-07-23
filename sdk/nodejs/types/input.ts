@@ -14,9 +14,6 @@ export namespace ImportLists {
 export namespace Indexers {
 }
 
-export namespace Languages {
-}
-
 export namespace MediaManagement {
     export interface RootFolderUnmappedFolder {
         /**

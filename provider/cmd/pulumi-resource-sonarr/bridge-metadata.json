@@ -97,8 +97,6 @@
             "sonarr:Indexers/getIndexer:getIndexer": "sonarr_indexer",
             "sonarr:Indexers/getIndexerConfig:getIndexerConfig": "sonarr_indexer_config",
             "sonarr:Indexers/getIndexers:getIndexers": "sonarr_indexers",
-            "sonarr:Languages/getLanguage:getLanguage": "sonarr_language",
-            "sonarr:Languages/getLanguages:getLanguages": "sonarr_languages",
             "sonarr:MediaManagement/getMediaManagement:getMediaManagement": "sonarr_media_management",
             "sonarr:MediaManagement/getNaming:getNaming": "sonarr_naming",
             "sonarr:MediaManagement/getRootFolder:getRootFolder": "sonarr_root_folder",
@@ -118,6 +116,8 @@
             "sonarr:Profiles/getCustomFormats:getCustomFormats": "sonarr_custom_formats",
             "sonarr:Profiles/getDelayProfile:getDelayProfile": "sonarr_delay_profile",
             "sonarr:Profiles/getDelayProfiles:getDelayProfiles": "sonarr_delay_profiles",
+            "sonarr:Profiles/getLanguage:getLanguage": "sonarr_language",
+            "sonarr:Profiles/getLanguages:getLanguages": "sonarr_languages",
             "sonarr:Profiles/getQuality:getQuality": "sonarr_quality",
             "sonarr:Profiles/getQualityDefinition:getQualityDefinition": "sonarr_quality_definition",
             "sonarr:Profiles/getQualityDefinitions:getQualityDefinitions": "sonarr_quality_definitions",
@@ -788,12 +788,6 @@
                 "seasonPackSeedTime": "season_pack_seed_time",
                 "seedRatio": "seed_ratio",
                 "seedTime": "seed_time"
-            },
-            "sonarr:Languages/getLanguage:getLanguage": {
-                "nameLower": "name_lower"
-            },
-            "sonarr:Languages/getLanguagesLanguage:getLanguagesLanguage": {
-                "nameLower": "name_lower"
             },
             "sonarr:MediaManagement/getMediaManagement:getMediaManagement": {
                 "chmodFolder": "chmod_folder",
@@ -1531,6 +1525,12 @@
                 "preferredProtocol": "preferred_protocol",
                 "torrentDelay": "torrent_delay",
                 "usenetDelay": "usenet_delay"
+            },
+            "sonarr:Profiles/getLanguage:getLanguage": {
+                "nameLower": "name_lower"
+            },
+            "sonarr:Profiles/getLanguagesLanguage:getLanguagesLanguage": {
+                "nameLower": "name_lower"
             },
             "sonarr:Profiles/getQualityDefinition:getQualityDefinition": {
                 "maxSize": "max_size",

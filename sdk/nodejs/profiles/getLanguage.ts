@@ -13,7 +13,7 @@ import * as utilities from "../utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as sonarr from "@pulumi/sonarr";
  *
- * const example = sonarr.Languages.getLanguage({
+ * const example = sonarr.Profiles.getLanguage({
  *     name: "English",
  * });
  * ```
@@ -21,7 +21,7 @@ import * as utilities from "../utilities";
 export function getLanguage(args: GetLanguageArgs, opts?: pulumi.InvokeOptions): Promise<GetLanguageResult> {
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
-    return pulumi.runtime.invoke("sonarr:Languages/getLanguage:getLanguage", {
+    return pulumi.runtime.invoke("sonarr:Profiles/getLanguage:getLanguage", {
         "name": args.name,
     }, opts);
 }
@@ -62,7 +62,7 @@ export interface GetLanguageResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as sonarr from "@pulumi/sonarr";
  *
- * const example = sonarr.Languages.getLanguage({
+ * const example = sonarr.Profiles.getLanguage({
  *     name: "English",
  * });
  * ```

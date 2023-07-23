@@ -695,33 +695,6 @@
                 }
             }
         },
-        "sonarr:Languages/getLanguagesLanguage:getLanguagesLanguage": {
-            "properties": {
-                "id": {
-                    "type": "integer",
-                    "description": "Language ID.\n"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "Language.\n"
-                },
-                "nameLower": {
-                    "type": "string",
-                    "description": "Language in lowercase.\n"
-                }
-            },
-            "type": "object",
-            "required": [
-                "id",
-                "name",
-                "nameLower"
-            ],
-            "language": {
-                "nodejs": {
-                    "requiredInputs": []
-                }
-            }
-        },
         "sonarr:MediaManagement/RootFolderUnmappedFolder:RootFolderUnmappedFolder": {
             "properties": {
                 "name": {
@@ -1715,6 +1688,33 @@
                 "tags",
                 "torrentDelay",
                 "usenetDelay"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "sonarr:Profiles/getLanguagesLanguage:getLanguagesLanguage": {
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Language ID.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Language.\n"
+                },
+                "nameLower": {
+                    "type": "string",
+                    "description": "Language in lowercase.\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "id",
+                "name",
+                "nameLower"
             ],
             "language": {
                 "nodejs": {
@@ -22552,69 +22552,6 @@
                 ]
             }
         },
-        "sonarr:Languages/getLanguage:getLanguage": {
-            "description": "\u003c!-- subcategory:Languages --\u003eSingle available Language.\n\n{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sonarr from \"@pulumi/sonarr\";\n\nconst example = sonarr.Languages.getLanguage({\n    name: \"English\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sonarr as sonarr\n\nexample = sonarr.Languages.get_language(name=\"English\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sonarr = Pulumi.Sonarr;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sonarr.Languages.GetLanguage.Invoke(new()\n    {\n        Name = \"English\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/MaienM/pulumi-sonarr/sdk/v3/go/sonarr/Languages\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := Languages.GetLanguage(ctx, \u0026languages.GetLanguageArgs{\n\t\t\tName: \"English\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sonarr.Languages.LanguagesFunctions;\nimport com.pulumi.sonarr.Languages.inputs.GetLanguageArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = LanguagesFunctions.getLanguage(GetLanguageArgs.builder()\n            .name(\"English\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      Function: sonarr:Languages:getLanguage\n      Arguments:\n        name: English\n```\n{{% /example %}}\n{{% /examples %}}",
-            "inputs": {
-                "description": "A collection of arguments for invoking getLanguage.\n",
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "Language.\n"
-                    }
-                },
-                "type": "object",
-                "required": [
-                    "name"
-                ]
-            },
-            "outputs": {
-                "description": "A collection of values returned by getLanguage.\n",
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "description": "Language ID.\n"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "Language.\n"
-                    },
-                    "nameLower": {
-                        "type": "string",
-                        "description": "Language in lowercase.\n"
-                    }
-                },
-                "type": "object",
-                "required": [
-                    "id",
-                    "name",
-                    "nameLower"
-                ]
-            }
-        },
-        "sonarr:Languages/getLanguages:getLanguages": {
-            "description": "\u003c!-- subcategory:Languages --\u003eList all available Languages.\n\n{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sonarr from \"@pulumi/sonarr\";\n\nconst example = sonarr.Languages.getLanguages({});\n```\n```python\nimport pulumi\nimport pulumi_sonarr as sonarr\n\nexample = sonarr.Languages.get_languages()\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sonarr = Pulumi.Sonarr;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sonarr.Languages.GetLanguages.Invoke();\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/MaienM/pulumi-sonarr/sdk/v3/go/sonarr/Languages\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := Languages.GetLanguages(ctx, nil, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sonarr.Languages.LanguagesFunctions;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = LanguagesFunctions.getLanguages();\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      Function: sonarr:Languages:getLanguages\n      Arguments: {}\n```\n{{% /example %}}\n{{% /examples %}}",
-            "outputs": {
-                "description": "A collection of values returned by getLanguages.\n",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "The ID of this resource.\n"
-                    },
-                    "languages": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/types/sonarr:Languages/getLanguagesLanguage:getLanguagesLanguage"
-                        },
-                        "description": "Language list.\n"
-                    }
-                },
-                "type": "object",
-                "required": [
-                    "id",
-                    "languages"
-                ]
-            }
-        },
         "sonarr:MediaManagement/getMediaManagement:getMediaManagement": {
             "description": "\u003c!-- subcategory:Media Management --\u003eMedia Management.\n\n{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sonarr from \"@pulumi/sonarr\";\n\nconst example = sonarr.MediaManagement.getMediaManagement({});\n```\n```python\nimport pulumi\nimport pulumi_sonarr as sonarr\n\nexample = sonarr.MediaManagement.get_media_management()\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sonarr = Pulumi.Sonarr;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sonarr.MediaManagement.GetMediaManagement.Invoke();\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/MaienM/pulumi-sonarr/sdk/v3/go/sonarr/MediaManagement\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := MediaManagement.GetMediaManagement(ctx, nil, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sonarr.MediaManagement.MediaManagementFunctions;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = MediaManagementFunctions.getMediaManagement();\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      Function: sonarr:MediaManagement:getMediaManagement\n      Arguments: {}\n```\n{{% /example %}}\n{{% /examples %}}",
             "outputs": {
@@ -24196,6 +24133,69 @@
                 "required": [
                     "delayProfiles",
                     "id"
+                ]
+            }
+        },
+        "sonarr:Profiles/getLanguage:getLanguage": {
+            "description": "\u003c!-- subcategory:Languages --\u003eSingle available Language.\n\n{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sonarr from \"@pulumi/sonarr\";\n\nconst example = sonarr.Profiles.getLanguage({\n    name: \"English\",\n});\n```\n```python\nimport pulumi\nimport pulumi_sonarr as sonarr\n\nexample = sonarr.Profiles.get_language(name=\"English\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sonarr = Pulumi.Sonarr;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sonarr.Profiles.GetLanguage.Invoke(new()\n    {\n        Name = \"English\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/MaienM/pulumi-sonarr/sdk/v3/go/sonarr/Profiles\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := Profiles.GetLanguage(ctx, \u0026profiles.GetLanguageArgs{\n\t\t\tName: \"English\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sonarr.Profiles.ProfilesFunctions;\nimport com.pulumi.sonarr.Profiles.inputs.GetLanguageArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ProfilesFunctions.getLanguage(GetLanguageArgs.builder()\n            .name(\"English\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      Function: sonarr:Profiles:getLanguage\n      Arguments:\n        name: English\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getLanguage.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Language.\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getLanguage.\n",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "Language ID.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Language.\n"
+                    },
+                    "nameLower": {
+                        "type": "string",
+                        "description": "Language in lowercase.\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "nameLower"
+                ]
+            }
+        },
+        "sonarr:Profiles/getLanguages:getLanguages": {
+            "description": "\u003c!-- subcategory:Languages --\u003eList all available Languages.\n\n{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as sonarr from \"@pulumi/sonarr\";\n\nconst example = sonarr.Profiles.getLanguages({});\n```\n```python\nimport pulumi\nimport pulumi_sonarr as sonarr\n\nexample = sonarr.Profiles.get_languages()\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Sonarr = Pulumi.Sonarr;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Sonarr.Profiles.GetLanguages.Invoke();\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/MaienM/pulumi-sonarr/sdk/v3/go/sonarr/Profiles\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := Profiles.GetLanguages(ctx, nil, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.sonarr.Profiles.ProfilesFunctions;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ProfilesFunctions.getLanguages();\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      Function: sonarr:Profiles:getLanguages\n      Arguments: {}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "outputs": {
+                "description": "A collection of values returned by getLanguages.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The ID of this resource.\n"
+                    },
+                    "languages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/sonarr:Profiles/getLanguagesLanguage:getLanguagesLanguage"
+                        },
+                        "description": "Language list.\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id",
+                    "languages"
                 ]
             }
         },

@@ -16,7 +16,6 @@ import * as config from "./config";
 import * as downloadclients from "./downloadclients";
 import * as importlists from "./importlists";
 import * as indexers from "./indexers";
-import * as languages from "./languages";
 import * as mediamanagement from "./mediamanagement";
 import * as metadata from "./metadata";
 import * as notifications from "./notifications";
@@ -30,7 +29,6 @@ export {
     downloadclients,
     importlists,
     indexers,
-    languages,
     mediamanagement,
     metadata,
     notifications,
