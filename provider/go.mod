@@ -2,7 +2,10 @@ module github.com/MaienM/pulumi-sonarr/provider
 
 go 1.19
 
-replace github.com/devopsarr/terraform-provider-sonarr/shim => ./shim
+replace (
+	github.com/devopsarr/terraform-provider-sonarr/shim => ./shim
+	github.com/pulumi/pulumi-terraform-bridge/pf => github.com/MaienM/pulumi-terraform-bridge/pf v0.0.0-20230723113535-9428892baca2
+)
 
 require (
 	github.com/devopsarr/terraform-provider-sonarr/shim v0.0.0-00010101000000-000000000000
