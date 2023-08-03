@@ -162,7 +162,6 @@ func Provider() tfbridge.ProviderInfo {
 			"sonarr_indexer_iptorrents":     {Tok: makeResource(modIndexers, "sonarr_indexer_iptorrents")},
 			"sonarr_indexer_newznab":        {Tok: makeResource(modIndexers, "sonarr_indexer_newznab")},
 			"sonarr_indexer_nyaa":           {Tok: makeResource(modIndexers, "sonarr_indexer_nyaa")},
-			"sonarr_indexer_rarbg":          {Tok: makeResource(modIndexers, "sonarr_indexer_rarbg")},
 			"sonarr_indexer_torrent_rss":    {Tok: makeResource(modIndexers, "sonarr_indexer_torrent_rss")},
 			"sonarr_indexer_torrentleech":   {Tok: makeResource(modIndexers, "sonarr_indexer_torrentleech")},
 			"sonarr_indexer_torznab":        {Tok: makeResource(modIndexers, "sonarr_indexer_torznab")},

@@ -1428,10 +1428,6 @@
                 }
             },
             "type": "object",
-            "required": [
-                "format",
-                "score"
-            ],
             "language": {
                 "nodejs": {
                     "requiredOutputs": [
@@ -7903,7 +7899,7 @@
                 },
                 "listType": {
                     "type": "integer",
-                    "description": "Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '1' Completed, '2' Dropped.\n"
+                    "description": "Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '3' Completed, '4' Dropped.\n"
                 },
                 "name": {
                     "type": "string",
@@ -7977,7 +7973,7 @@
                 },
                 "listType": {
                     "type": "integer",
-                    "description": "Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '1' Completed, '2' Dropped.\n"
+                    "description": "Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '3' Completed, '4' Dropped.\n"
                 },
                 "name": {
                     "type": "string",
@@ -8048,7 +8044,7 @@
                     },
                     "listType": {
                         "type": "integer",
-                        "description": "Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '1' Completed, '2' Dropped.\n"
+                        "description": "Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '3' Completed, '4' Dropped.\n"
                     },
                     "name": {
                         "type": "string",
@@ -11004,215 +11000,6 @@
                     "priority": {
                         "type": "integer",
                         "description": "Priority.\n"
-                    },
-                    "seasonPackSeedTime": {
-                        "type": "integer",
-                        "description": "Season seed time.\n"
-                    },
-                    "seedRatio": {
-                        "type": "number",
-                        "description": "Seed ratio.\n"
-                    },
-                    "seedTime": {
-                        "type": "integer",
-                        "description": "Seed time.\n"
-                    },
-                    "tags": {
-                        "type": "array",
-                        "items": {
-                            "type": "integer"
-                        },
-                        "description": "List of associated tags.\n"
-                    }
-                },
-                "type": "object"
-            }
-        },
-        "sonarr:Indexers/indexerRarbg:IndexerRarbg": {
-            "description": "\u003c!-- subcategory:Indexers --\u003eIndexer Rarbg resource.\nFor more information refer to [Indexer](https://wiki.servarr.com/sonarr/settings#indexers) and [Rarbg](https://wiki.servarr.com/sonarr/supported#rarbg).\n\n\n## Import\n\nimport using the API/UI ID\n\n```sh\n $ pulumi import sonarr:Indexers/indexerRarbg:IndexerRarbg example 1\n```\n\n ",
-            "properties": {
-                "baseUrl": {
-                    "type": "string",
-                    "description": "Base URL.\n"
-                },
-                "captchaToken": {
-                    "type": "string",
-                    "description": "Captcha token.\n"
-                },
-                "downloadClientId": {
-                    "type": "integer",
-                    "description": "Download client ID.\n"
-                },
-                "enableAutomaticSearch": {
-                    "type": "boolean",
-                    "description": "Enable automatic search flag.\n"
-                },
-                "enableInteractiveSearch": {
-                    "type": "boolean",
-                    "description": "Enable interactive search flag.\n"
-                },
-                "enableRss": {
-                    "type": "boolean",
-                    "description": "Enable RSS flag.\n"
-                },
-                "minimumSeeders": {
-                    "type": "integer",
-                    "description": "Minimum seeders.\n"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "IndexerRarbg name.\n"
-                },
-                "priority": {
-                    "type": "integer",
-                    "description": "Priority.\n"
-                },
-                "rankedOnly": {
-                    "type": "boolean",
-                    "description": "Allow ranked only.\n"
-                },
-                "seasonPackSeedTime": {
-                    "type": "integer",
-                    "description": "Season seed time.\n"
-                },
-                "seedRatio": {
-                    "type": "number",
-                    "description": "Seed ratio.\n"
-                },
-                "seedTime": {
-                    "type": "integer",
-                    "description": "Seed time.\n"
-                },
-                "tags": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer"
-                    },
-                    "description": "List of associated tags.\n"
-                }
-            },
-            "required": [
-                "baseUrl",
-                "captchaToken",
-                "downloadClientId",
-                "enableAutomaticSearch",
-                "enableInteractiveSearch",
-                "enableRss",
-                "minimumSeeders",
-                "name",
-                "priority",
-                "rankedOnly",
-                "seasonPackSeedTime",
-                "seedRatio",
-                "seedTime",
-                "tags"
-            ],
-            "inputProperties": {
-                "baseUrl": {
-                    "type": "string",
-                    "description": "Base URL.\n"
-                },
-                "captchaToken": {
-                    "type": "string",
-                    "description": "Captcha token.\n"
-                },
-                "downloadClientId": {
-                    "type": "integer",
-                    "description": "Download client ID.\n"
-                },
-                "enableAutomaticSearch": {
-                    "type": "boolean",
-                    "description": "Enable automatic search flag.\n"
-                },
-                "enableInteractiveSearch": {
-                    "type": "boolean",
-                    "description": "Enable interactive search flag.\n"
-                },
-                "enableRss": {
-                    "type": "boolean",
-                    "description": "Enable RSS flag.\n"
-                },
-                "minimumSeeders": {
-                    "type": "integer",
-                    "description": "Minimum seeders.\n"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "IndexerRarbg name.\n"
-                },
-                "priority": {
-                    "type": "integer",
-                    "description": "Priority.\n"
-                },
-                "rankedOnly": {
-                    "type": "boolean",
-                    "description": "Allow ranked only.\n"
-                },
-                "seasonPackSeedTime": {
-                    "type": "integer",
-                    "description": "Season seed time.\n"
-                },
-                "seedRatio": {
-                    "type": "number",
-                    "description": "Seed ratio.\n"
-                },
-                "seedTime": {
-                    "type": "integer",
-                    "description": "Seed time.\n"
-                },
-                "tags": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer"
-                    },
-                    "description": "List of associated tags.\n"
-                }
-            },
-            "requiredInputs": [
-                "name"
-            ],
-            "stateInputs": {
-                "description": "Input properties used for looking up and filtering IndexerRarbg resources.\n",
-                "properties": {
-                    "baseUrl": {
-                        "type": "string",
-                        "description": "Base URL.\n"
-                    },
-                    "captchaToken": {
-                        "type": "string",
-                        "description": "Captcha token.\n"
-                    },
-                    "downloadClientId": {
-                        "type": "integer",
-                        "description": "Download client ID.\n"
-                    },
-                    "enableAutomaticSearch": {
-                        "type": "boolean",
-                        "description": "Enable automatic search flag.\n"
-                    },
-                    "enableInteractiveSearch": {
-                        "type": "boolean",
-                        "description": "Enable interactive search flag.\n"
-                    },
-                    "enableRss": {
-                        "type": "boolean",
-                        "description": "Enable RSS flag.\n"
-                    },
-                    "minimumSeeders": {
-                        "type": "integer",
-                        "description": "Minimum seeders.\n"
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "IndexerRarbg name.\n"
-                    },
-                    "priority": {
-                        "type": "integer",
-                        "description": "Priority.\n"
-                    },
-                    "rankedOnly": {
-                        "type": "boolean",
-                        "description": "Allow ranked only.\n"
                     },
                     "seasonPackSeedTime": {
                         "type": "integer",
@@ -21320,7 +21107,7 @@
             "properties": {
                 "enabled": {
                     "type": "boolean",
-                    "description": "Enabled\n"
+                    "description": "Enabled.\n"
                 },
                 "ignoreds": {
                     "type": "array",
@@ -21331,7 +21118,7 @@
                 },
                 "indexerId": {
                     "type": "integer",
-                    "description": "Indexer ID. Set `0` for all.\n"
+                    "description": "Indexer ID. Default to all.\n"
                 },
                 "name": {
                     "type": "string",
@@ -21363,7 +21150,7 @@
             "inputProperties": {
                 "enabled": {
                     "type": "boolean",
-                    "description": "Enabled\n"
+                    "description": "Enabled.\n"
                 },
                 "ignoreds": {
                     "type": "array",
@@ -21374,7 +21161,7 @@
                 },
                 "indexerId": {
                     "type": "integer",
-                    "description": "Indexer ID. Set `0` for all.\n"
+                    "description": "Indexer ID. Default to all.\n"
                 },
                 "name": {
                     "type": "string",
@@ -21400,7 +21187,7 @@
                 "properties": {
                     "enabled": {
                         "type": "boolean",
-                        "description": "Enabled\n"
+                        "description": "Enabled.\n"
                     },
                     "ignoreds": {
                         "type": "array",
@@ -21411,7 +21198,7 @@
                     },
                     "indexerId": {
                         "type": "integer",
-                        "description": "Indexer ID. Set `0` for all.\n"
+                        "description": "Indexer ID. Default to all.\n"
                     },
                     "name": {
                         "type": "string",

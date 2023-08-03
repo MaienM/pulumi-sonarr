@@ -60,7 +60,7 @@ export class ReleaseProfile extends pulumi.CustomResource {
     }
 
     /**
-     * Enabled
+     * Enabled.
      */
     public readonly enabled!: pulumi.Output<boolean>;
     /**
@@ -68,7 +68,7 @@ export class ReleaseProfile extends pulumi.CustomResource {
      */
     public readonly ignoreds!: pulumi.Output<string[]>;
     /**
-     * Indexer ID. Set `0` for all.
+     * Indexer ID. Default to all.
      */
     public readonly indexerId!: pulumi.Output<number>;
     /**
@@ -122,7 +122,7 @@ export class ReleaseProfile extends pulumi.CustomResource {
  */
 export interface ReleaseProfileState {
     /**
-     * Enabled
+     * Enabled.
      */
     enabled?: pulumi.Input<boolean>;
     /**
@@ -130,7 +130,7 @@ export interface ReleaseProfileState {
      */
     ignoreds?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Indexer ID. Set `0` for all.
+     * Indexer ID. Default to all.
      */
     indexerId?: pulumi.Input<number>;
     /**
@@ -152,7 +152,7 @@ export interface ReleaseProfileState {
  */
 export interface ReleaseProfileArgs {
     /**
-     * Enabled
+     * Enabled.
      */
     enabled?: pulumi.Input<boolean>;
     /**
@@ -160,7 +160,7 @@ export interface ReleaseProfileArgs {
      */
     ignoreds?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Indexer ID. Set `0` for all.
+     * Indexer ID. Default to all.
      */
     indexerId?: pulumi.Input<number>;
     /**

@@ -63,11 +63,6 @@ export type IndexerNyaa = import("./indexerNyaa").IndexerNyaa;
 export const IndexerNyaa: typeof import("./indexerNyaa").IndexerNyaa = null as any;
 utilities.lazyLoad(exports, ["IndexerNyaa"], () => require("./indexerNyaa"));
 
-export { IndexerRarbgArgs, IndexerRarbgState } from "./indexerRarbg";
-export type IndexerRarbg = import("./indexerRarbg").IndexerRarbg;
-export const IndexerRarbg: typeof import("./indexerRarbg").IndexerRarbg = null as any;
-utilities.lazyLoad(exports, ["IndexerRarbg"], () => require("./indexerRarbg"));
-
 export { IndexerTorrentRssArgs, IndexerTorrentRssState } from "./indexerTorrentRss";
 export type IndexerTorrentRss = import("./indexerTorrentRss").IndexerTorrentRss;
 export const IndexerTorrentRss: typeof import("./indexerTorrentRss").IndexerTorrentRss = null as any;
@@ -106,8 +101,6 @@ const _module = {
                 return new IndexerNewznab(name, <any>undefined, { urn })
             case "sonarr:Indexers/indexerNyaa:IndexerNyaa":
                 return new IndexerNyaa(name, <any>undefined, { urn })
-            case "sonarr:Indexers/indexerRarbg:IndexerRarbg":
-                return new IndexerRarbg(name, <any>undefined, { urn })
             case "sonarr:Indexers/indexerTorrentRss:IndexerTorrentRss":
                 return new IndexerTorrentRss(name, <any>undefined, { urn })
             case "sonarr:Indexers/indexerTorrentleech:IndexerTorrentleech":
@@ -128,7 +121,6 @@ pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerHdbits", _modul
 pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerIptorrents", _module)
 pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerNewznab", _module)
 pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerNyaa", _module)
-pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerRarbg", _module)
 pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerTorrentRss", _module)
 pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerTorrentleech", _module)
 pulumi.runtime.registerResourceModule("sonarr", "Indexers/indexerTorznab", _module)

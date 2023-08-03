@@ -69,7 +69,7 @@ export namespace Profiles {
         /**
          * Format.
          */
-        format: pulumi.Input<number>;
+        format?: pulumi.Input<number>;
         /**
          * Name.
          */
@@ -77,7 +77,7 @@ export namespace Profiles {
         /**
          * Score.
          */
-        score: pulumi.Input<number>;
+        score?: pulumi.Input<number>;
     }
 
     export interface QualityProfileQualityGroup {

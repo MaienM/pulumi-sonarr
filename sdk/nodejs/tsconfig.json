@@ -69,7 +69,6 @@
         "indexers/indexerIptorrents.ts",
         "indexers/indexerNewznab.ts",
         "indexers/indexerNyaa.ts",
-        "indexers/indexerRarbg.ts",
         "indexers/indexerTorrentRss.ts",
         "indexers/indexerTorrentleech.ts",
         "indexers/indexerTorznab.ts",

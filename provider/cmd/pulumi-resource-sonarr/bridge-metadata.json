@@ -41,7 +41,6 @@
             "sonarr:Indexers/indexerIptorrents:IndexerIptorrents": "sonarr_indexer_iptorrents",
             "sonarr:Indexers/indexerNewznab:IndexerNewznab": "sonarr_indexer_newznab",
             "sonarr:Indexers/indexerNyaa:IndexerNyaa": "sonarr_indexer_nyaa",
-            "sonarr:Indexers/indexerRarbg:IndexerRarbg": "sonarr_indexer_rarbg",
             "sonarr:Indexers/indexerTorrentRss:IndexerTorrentRss": "sonarr_indexer_torrent_rss",
             "sonarr:Indexers/indexerTorrentleech:IndexerTorrentleech": "sonarr_indexer_torrentleech",
             "sonarr:Indexers/indexerTorznab:IndexerTorznab": "sonarr_indexer_torznab",
@@ -732,19 +731,6 @@
                 "enableInteractiveSearch": "enable_interactive_search",
                 "enableRss": "enable_rss",
                 "minimumSeeders": "minimum_seeders",
-                "seasonPackSeedTime": "season_pack_seed_time",
-                "seedRatio": "seed_ratio",
-                "seedTime": "seed_time"
-            },
-            "sonarr:Indexers/indexerRarbg:IndexerRarbg": {
-                "baseUrl": "base_url",
-                "captchaToken": "captcha_token",
-                "downloadClientId": "download_client_id",
-                "enableAutomaticSearch": "enable_automatic_search",
-                "enableInteractiveSearch": "enable_interactive_search",
-                "enableRss": "enable_rss",
-                "minimumSeeders": "minimum_seeders",
-                "rankedOnly": "ranked_only",
                 "seasonPackSeedTime": "season_pack_seed_time",
                 "seedRatio": "seed_ratio",
                 "seedTime": "seed_time"

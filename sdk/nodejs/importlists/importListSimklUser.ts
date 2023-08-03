@@ -80,7 +80,7 @@ export class ImportListSimklUser extends pulumi.CustomResource {
      */
     public readonly expires!: pulumi.Output<string>;
     /**
-     * Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '1' Completed, '2' Dropped.
+     * Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '3' Completed, '4' Dropped.
      */
     public readonly listType!: pulumi.Output<number>;
     /**
@@ -210,7 +210,7 @@ export interface ImportListSimklUserState {
      */
     expires?: pulumi.Input<string>;
     /**
-     * Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '1' Completed, '2' Dropped.
+     * Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '3' Completed, '4' Dropped.
      */
     listType?: pulumi.Input<number>;
     /**
@@ -268,7 +268,7 @@ export interface ImportListSimklUserArgs {
      */
     expires?: pulumi.Input<string>;
     /**
-     * Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '1' Completed, '2' Dropped.
+     * Simkl list type. '0' Watching, '1' PlanToWatch, '2' Hold, '3' Completed, '4' Dropped.
      */
     listType: pulumi.Input<number>;
     /**
