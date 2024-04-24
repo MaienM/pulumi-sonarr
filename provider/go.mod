@@ -5,6 +5,7 @@ go 1.21
 replace (
 	github.com/devopsarr/terraform-provider-sonarr => ../upstream
 	github.com/devopsarr/terraform-provider-sonarr/shim => ./shim
+	github.com/pulumi/pulumi-terraform-bridge/pf => github.com/MaienM/pulumi-terraform-bridge/pf v0.26.1-0.20240421171118-8aea220cd8f5
 )
 
 require (
