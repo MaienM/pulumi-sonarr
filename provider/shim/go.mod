@@ -1,5 +1,3 @@
-module github.com/devopsarr/terraform-provider-sonarr/v3/shim
+module github.com/devopsarr/terraform-provider-sonarr/shim
 
 go 1.21
-
-require github.com/devopsarr/terraform-provider-sonarr/v3 v3.2.0
