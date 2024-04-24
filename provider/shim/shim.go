@@ -1,7 +1,7 @@
 package shim
 
 import (
-	"github.com/devopsarr/terraform-provider-sonarr/v3/internal/provider"
+	"github.com/devopsarr/terraform-provider-sonarr/internal/provider"
 	tf "github.com/hashicorp/terraform-plugin-framework/provider"
 )
 
