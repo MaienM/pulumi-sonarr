@@ -48,9 +48,39 @@ type NameOverride struct {
 	Name   string
 }
 
-var prefix_module_map = map[string]string{}
+var prefix_module_map = map[string]string{
+	"import_list":  "ImportLists",
+	"indexer":      "Indexers",
+	"language":     "Languages",
+	"metadata":     "Metadata",
+	"notification": "Notifications",
+	"series":       "Series",
 
-var overrides = map[string]NameOverride{}
+	"download_client":     "DownloadClients",
+	"remote_path_mapping": "DownloadClients",
+
+	"media_management": "MediaManagement",
+	"naming":           "MediaManagement",
+	"root_folder":      "MediaManagement",
+
+	"custom_format":      "Profiles",
+	"delay_profile":      "Profiles",
+	"quality":            "Profiles",
+	"quality_definition": "Profiles",
+	"quality_profile":    "Profiles",
+	"release_profile":    "Profiles",
+
+	"host":   "System",
+	"system": "System",
+
+	"auto_tag": "Tags",
+	"tag":      "Tags",
+}
+
+var overrides = map[string]NameOverride{
+	"all_series":    {"Series", "AllSeries"},
+	"search_series": {"Series", "SearchSeries"},
+}
 
 func convertName(tfname string) (module string, name string) {
 	contract.Assertf(strings.HasPrefix(tfname, "sonarr_"), "Invalid snake case name %s. Does not start with sonarr_", tfname)
